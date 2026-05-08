@@ -6,7 +6,7 @@ import { db } from '../firebaseConfig';
 import { setDoc, doc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword as registroUsuario} from 'firebase/auth';
 import { auth } from '../firebaseConfig';
-import './Sign.css';
+import './SharpMelodic.css'
 
 const CreateAccount: React.FC = () => {
     const [passwordVisible, SetpasswordVisible] = useState(false);
@@ -23,7 +23,7 @@ const CreateAccount: React.FC = () => {
 
         if(!userPassword || !userMail || !userName){
             present({
-                message: 'Please, complete all the blank spaces to create your account',
+                message: 'Por favor, rellena todos los espacios en blanco para crear tu cuenta',
                 color: 'warning',
                 duration: 2000,
             })
@@ -38,7 +38,7 @@ const CreateAccount: React.FC = () => {
                 });
 
                 present({
-                    message: `Congrats, your user has been created. Welcome ${userName}`,
+                    message: `Felicidades, has creado tu cuenta. Bienvenido a Sharp-Melodic: ${userName}`,
                     color: 'success',
                     duration: 2000,
                 });
@@ -51,9 +51,9 @@ const CreateAccount: React.FC = () => {
                 await(2000);
                 history.push('/');
             }catch(error){
-                console.error('There was an error while creating your account');
+                console.error('Hubo un error inesperado durante la creación de tu cuenta');
                 present({
-                    message: 'There was an unexpected error while creating your account',
+                    message: 'Hubo un error inesperado durante la creación de tu cuenta',
                     color: 'danger',
                     duration: 2000,
                 });

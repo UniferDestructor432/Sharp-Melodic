@@ -1,6 +1,10 @@
-.Sign-Page ion-content {
+.Sign-Page, .Upload-Music ion-content {
     --background: #0F1419;
     text-align: center;
+}
+
+.Upload-Music ion-content {
+    text-align: start;
 }
 
 .Sign-Page h1 {
@@ -10,7 +14,7 @@
     color: white;
 }
 
-.Sign-Page h2 {
+.Sign-Page, .Upload-Music h2 {
     font-family: 'Afacad', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -18,6 +22,11 @@
     margin-top: 70px;
     text-align: start;
     margin-left: 36px;
+}
+
+.Upload-Music h2 {
+    margin-top: 49px;
+    margin-left: 16px;
 }
 
 .Sign-Page h3 {
@@ -78,11 +87,16 @@
     width: 360px;
 }
 
-.Sign-Page h5 {
+.Sign-Page, .Upload-Music h5 {
     font-size: 18px;
     font-family: 'Afacad', sans-serif;
     color: #A8B2BD;
     margin-top: 7px;
+}
+
+.Upload-Music h5{
+    margin-top: 39px;
+    margin-left: 56px;
 }
 
 .PasswordBarsDeactivated {
@@ -96,4 +110,19 @@
     height: 8px;
     background: #3A4452;
   color: #6B7785;
+}
+
+.Backwards {
+    background: #161D24;
+    color: white;
+    border: 1px solid #595959;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    margin-top: 46px;
+    margin-left: 49px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

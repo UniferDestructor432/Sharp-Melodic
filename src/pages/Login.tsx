@@ -4,7 +4,7 @@ import { eye, eyeOff, lockClosed, mailOutline } from 'ionicons/icons'
 import { auth } from '../firebaseConfig';
 import { signInWithEmailAndPassword as loginUsuario } from 'firebase/auth';
 import { useHistory } from 'react-router';
-import './Sign.css';
+import './SharpMelodic.css'
 
 const Login: React.FC = () => {
   const [passwordVisible, SetpasswordVisible] = useState(false);
@@ -18,7 +18,7 @@ const Login: React.FC = () => {
 
     if(!userPassword || !userMail){
       present({
-          message: 'Please, complete all the blank spaces to create your account',
+          message: 'Por favor, rellena todos los espacios en blanco para iniciar sesión',
           color: 'warning',
           duration: 2000,
       })
@@ -27,7 +27,7 @@ const Login: React.FC = () => {
         await loginUsuario(auth, userMail, userPassword);
 
         present({
-          message: `Access granted! Welcome back`,
+          message: `¡Acceso concedido! Bienvenido de vuelta`,
           color: 'success',
           duration: 2000,
         })
@@ -40,16 +40,16 @@ const Login: React.FC = () => {
         history.push('/create-account')
       }catch(error:any){
         if(error.code === "auth/user-not-found" || error.code === "auth/wrong-password") {
-          console.error("The user or password is incorrect");
+          console.error("El usuario o contraseña son incorrectos");
           present({
-              message: 'The user or password is incorrect',
+              message: 'El usuario o contraseña son incorrectos',
               color: 'danger',
               duration: 2000,
           })
         }else{
-          console.error("There was an unexpected error while accessing your account: ",error);
+          console.error("Se encontró un error inesperado al acceder a tu cuenta: ",error);
           present({
-            message: `There was an unexpected error while accessing your account: ${error}`,
+            message: `Se encontró un error inesperado al acceder a tu cuenta: ${error}`,
             color: 'danger',
             duration: 2000,
           })

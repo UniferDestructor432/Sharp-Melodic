@@ -3,6 +3,7 @@ import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Login';
 import CreateAccount from './pages/CreateAccount';
+import UploadMusic from './pages/UploadMusic';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -45,6 +46,9 @@ const App: React.FC = () => (
         </Route>
         <Route exact path="/create-account">
           <CreateAccount />
+        </Route>
+        <Route exact path="/upload-music">
+          <UploadMusic />
         </Route>
         <Route exact path="/">
           <Redirect to="/login"/>
