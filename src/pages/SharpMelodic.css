@@ -1,4 +1,4 @@
-.Sign-Page, .Upload-Music ion-content {
+.Sign-Page ion-content, .Upload-Music ion-content {
     --background: #0F1419;
     text-align: center;
 }
@@ -14,7 +14,7 @@
     color: white;
 }
 
-.Sign-Page, .Upload-Music h2 {
+.Sign-Page h2, .Upload-Music h2 {
     font-family: 'Afacad', sans-serif;
     font-size: 40px;
     font-weight: 400;
@@ -87,7 +87,13 @@
     width: 360px;
 }
 
-.Sign-Page, .Upload-Music h5 {
+.Upload-Music h4{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+.Sign-Page h5, .Upload-Music h5 {
     font-size: 18px;
     font-family: 'Afacad', sans-serif;
     color: #A8B2BD;
@@ -97,6 +103,11 @@
 .Upload-Music h5{
     margin-top: 39px;
     margin-left: 56px;
+}
+
+.Upload-Music h6{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 .PasswordBarsDeactivated {
@@ -109,7 +120,7 @@
     width: 70px;
     height: 8px;
     background: #3A4452;
-  color: #6B7785;
+    color: #6B7785;
 }
 
 .Backwards {
@@ -125,4 +136,41 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.Upload-Zone {
+  display: block;
+  width: 349px;
+  height: 301px;
+  margin-top: 13px;
+  justify-self: center;
+  background: #161D24;
+  border: 2px dashed #3A4452;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Upload-Zone input{
+    display: none;
+}
+
+.Demo-Music{
+    display: flex;
+    flex-direction: row;
+    width: 349px;
+    height: 68px;
+    background: #161D24;
+    border-radius: 10px;
+    border: 1px solid #595959;
+    align-items: center;
+}
+
+.AddMusic-Button{
+    position: absolute;
+    right: 68px;
+    background: #1E2A36;
+    width: 95px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1px solid #ffff;
 }
